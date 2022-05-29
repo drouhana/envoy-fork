@@ -3589,7 +3589,7 @@ envoy_cc_library(
 envoy_cc_library(
     name = "quic_core_types_lib",
     srcs = [
-        "quiche/quic/core/quic_connection_id.cc",
+        #"quiche/quic/core/quic_connection_id.cc",
         "quiche/quic/core/quic_packet_number.cc",
         "quiche/quic/core/quic_types.cc",
     ],
