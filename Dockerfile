@@ -15,7 +15,7 @@ RUN wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases
     && chmod +x /usr/local/bin/bazel
 
 # copy files
-COPY . /usr/local/envoy 
+COPY . /usr/local/envoy/
 
 # build
 WORKDIR /usr/local/envoy
