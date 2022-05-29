@@ -8,7 +8,7 @@ ENV TZ=Etc/UTC
 
 # update package manager
 RUN apt-get update -y \
-    && apt-get install -y apt-utils autoconf automake cmake curl libtool make ninja-build patch python3-pip unzip virtualenv
+    && apt-get install -y apt-utils autoconf automake cmake curl libtool make ninja-build patch python3-pip unzip virtualenv wget
 
 # install bazelisk as bazel
 RUN wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/latest/download/bazelisk-linux-$([ $(uname -m) = "aarch64" ] && echo "arm64" || echo "amd64") \
