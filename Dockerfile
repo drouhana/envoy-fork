@@ -15,11 +15,10 @@ RUN wget -O /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases
     && chmod +x /usr/local/bin/bazel
 
 # copy files
-COPY * /usr/local/envoy
+COPY . /usr/local/envoy
 
 # build
 WORKDIR /usr/local/envoy
-RUN echo $PWD
 RUN bazel build -c opt envoy
 
 # note: user.bazelrc currently has the following build arguments in it:
