@@ -19,7 +19,7 @@ COPY . /usr/local/envoy
 
 # build
 WORKDIR /usr/local/envoy
-RUN bazel build -c opt envoy
+RUN bazel build -c opt envoy --verbose_failures
 
 # note: user.bazelrc currently has the following build arguments in it:
 #   build --config=libc++ --define quiche=disabled --define wasm=disabled --define deprecated_features=disabled --//bazel:http3=false --//source/extensions/quic/crypto_stream:enabled=false --//source/extensions/quic/proof_source:enabled=false
