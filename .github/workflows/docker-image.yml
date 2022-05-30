@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag drouhana/envoy-fork:$(date +%s)
     - name: docker push
-      run: docker push drouhana/envoy-fork
+      run: docker push drouhana/envoy-fork:$(date +%s)
